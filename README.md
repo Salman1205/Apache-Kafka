@@ -1,37 +1,3 @@
-### Producer README
-
-#### Introduction
-The producer script (`producer.py`) is responsible for preprocessing data from a JSON file and producing the preprocessed data to a Kafka topic. This README provides an overview of the producer script and instructions for its usage.
-
-#### Prerequisites
-Before running the producer script, ensure that you have the following prerequisites installed:
-- Python 3.x
-- Confluent Kafka Python library (`confluent_kafka`)
-- Kafka broker running on `localhost:9092`
-- A JSON file containing the data to be processed
-
-#### Usage
-1. **Configuration**: Update the configuration parameters in the script according to your environment:
-   - `input_json_file`: Path to the input JSON file containing the data to be processed.
-   - `bootstrap.servers`: Kafka broker address (e.g., `'localhost:9092'`).
-   - `batch_size`: Number of messages to be processed in each batch.
-   - `batch_interval`: Time interval (in seconds) between each batch processing.
-
-2. **Running the Script**:
-   Execute the producer script using the following command:
-   ```
-   python producer.py
-   ```
-   The script will preprocess the data from the JSON file and produce the preprocessed data to the specified Kafka topic.
-
-3. **Output**:
-   During execution, the script will display information about the batches processed and messages sent.
-
-#### Example
-```python
-python producer.py
-```
-
 ### Consumer README
 
 #### Introduction
@@ -72,3 +38,4 @@ python consumer.py
 ### Note
 - Make sure that the Kafka producer is running and producing data to the specified topic before executing the consumer script.
 - Adjust the Kafka topic name in the consumer script to match the topic produced by the producer.
+- The Apriori, PCY, and SON algorithms are implemented in separate files (`apriori_algorithm.py`, `pcy_son_algorithms.py`).
