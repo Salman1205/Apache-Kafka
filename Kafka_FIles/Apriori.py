@@ -11,8 +11,8 @@ topic = 'topic1'
 
 # MongoDB settings
 mongo_uri = "mongodb://localhost:27017/"
-mongo_db_name = "frequent_itemsets_db"
-mongo_collection_name = "frequent_itemsets"
+mongo_db_name = "db4"
+mongo_collection_name = "f_itemsets"
 
 # Connect to MongoDB
 client = MongoClient(mongo_uri)
